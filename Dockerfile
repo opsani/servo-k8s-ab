@@ -16,4 +16,6 @@ ADD https://raw.githubusercontent.com/opsani/servo-k8s/master/adjust \
 
 RUN chmod +x /servo/adjust /servo/measure /servo/servo /usr/local/bin/kubectl
 
+ENV PYTHONUNBUFFERED=1
+
 ENTRYPOINT [ "python3", "servo" ]
