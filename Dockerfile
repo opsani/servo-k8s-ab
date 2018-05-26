@@ -14,7 +14,8 @@ ADD https://raw.githubusercontent.com/opsani/servo-k8s/master/adjust \
     https://raw.githubusercontent.com/opsani/servo/master/servo \
     /servo/
 
-RUN chmod +x /servo/adjust /servo/measure /servo/servo /usr/local/bin/kubectl
+RUN chmod a+rwx /servo/adjust /servo/measure /servo/servo /usr/local/bin/kubectl
+RUN chmod a+rw /servo/measure.py
 
 ENV PYTHONUNBUFFERED=1
 
